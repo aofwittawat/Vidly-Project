@@ -6,7 +6,7 @@ const Like = (props) => {
         if(!props.liked) classes +="-o"
         // console.log(classes);
         return (
-            <i className={classes} aria-hidden="true" onClick={props.onLike}></i>
+            <i className={classes} aria-hidden="true" onClick={props.onClick}></i>
         )
 }
 

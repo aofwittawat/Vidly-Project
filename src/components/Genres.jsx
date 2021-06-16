@@ -6,7 +6,7 @@ const Genres = (props) => {
     <ul className="list-group">
       {items.map((item) => (
         <li
-          key={item[valueProperty]}
+          key={item[valueProperty] || item[textProperty]}
           className={ item === selectedGenres ? "list-group-item active" : "list-group-item"}
           onClick={() => onSelectedGenres(item)}
         >
@@ -16,6 +16,7 @@ const Genres = (props) => {
     </ul>
   );
 };
+// การทำ Default จะได้ง่ายต่อการจัดการ โดยไม่ต้องไปยุ่งกับ code ด้านบน ในกรณี ที่ API เราเปลี่ยนชื่อ property
 Genres.defaultProps = {
   textProperty: "name",
   valueProperty: "_id",

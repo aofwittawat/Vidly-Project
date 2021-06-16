@@ -12,7 +12,7 @@ const Pagination = (props) => {
   if (pageCount === 1) {
     return null;
   }
-//   สร้างจำนวนหน้า โดยทำเป็น array >> [1,2,3,...]
+//   สร้างจำนวนหน้า โดยทำเป็น array >> [1,2,3,...] ที่ +1 เพื่อจะได้รวม end ด้วย ไม่งั้นจะได้ array ที่ไม่รวม end
   const pages = _.range(1, pageCount + 1);
 //   console.log(pages);
   return (
