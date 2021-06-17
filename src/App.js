@@ -5,6 +5,7 @@ import Customers from './pages/Customers.jsx'
 import Rentals from './pages/Rentals.jsx'
 import NotFound from './pages/NotFound.jsx'
 import MovieForm from './pages/MovieForm.jsx'
+import LoginForm from './pages/LoginForm.jsx'
 import './App.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <main className="container mt-3">
         <Switch>
           <Route path ="/movies/:id" component={MovieForm}/>
+          <Route path ="/login" component={LoginForm}/>
           <Route path ="/rentals" component={Rentals}/>
           <Route path ="/customers" component={Customers}/>
           <Route path ="/not-found" component={NotFound}/>
