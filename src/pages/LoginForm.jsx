@@ -15,7 +15,8 @@ export default class LoginForm extends Component {
 
     const errors = this.validate()
     this.setState({errors})
-    if(errors) return
+    if(errors) return 
+    // return มาคั้นเพราะถ้ามี errors ให้หลุดออกไปก่อน ไม่ให้ call server 
   };
   handleChange = ({ currentTarget: input }) => {
     const account = { ...this.state.account };
